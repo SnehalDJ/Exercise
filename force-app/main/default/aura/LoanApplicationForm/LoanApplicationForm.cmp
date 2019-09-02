@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="LoanController">
+<aura:component implements="flexipage:availableForAllPageTypes" controller="LoanController">
 		<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
 	<aura:attribute name="loans" type="Loan__c[]" />
 		<aura:attribute name="newLoan" type="Loan__c"

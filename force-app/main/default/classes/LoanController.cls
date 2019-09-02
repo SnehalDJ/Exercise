@@ -2,8 +2,8 @@ public with sharing class LoanController {
 
     @AuraEnabled
     public static List<Loan__c> getLoans() {
-        String[] fieldsToCheck = new String [] {
-            'LoanId__c', 'Amount__c', 'Duration__c', 'Status__c', 'Employee__c'
+        String[] fieldsToCheck = new String[] {
+            'LoanId__c', 'Amount__c', 'Duration__c', 'Status__c'
         };
 
         Map<String, Schema.SObjectField> fieldDescribeTokens = Schema.SObjectType.Loan__c.fields.getMap();
@@ -14,7 +14,7 @@ public with sharing class LoanController {
             }
         }
             
-        return [ SELECT LoanId__c, Amount__c, Duration__c, Status__c, Employee__c
+        return [SELECT LoanId__c, Amount__c, Duration__c, Status__c
 		FROM Loan__c];
     }
 
