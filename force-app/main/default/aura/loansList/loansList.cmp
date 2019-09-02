@@ -1,0 +1,10 @@
+<aura:component>
+    <aura:attribute name="loans" type="Loan__c[]"/>
+    <lightning:card title="Loans">
+        <p class="slds-p-horizontal--small">
+            <aura:iteration items="{!v.loans}" var="loan">
+                <c:loanItem loan="{!loan}"/>
+            </aura:iteration>
+        </p>
+    </lightning:card>
+</aura:component>

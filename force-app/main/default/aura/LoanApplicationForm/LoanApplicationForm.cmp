@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="LoanController">
+		<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+	<aura:attribute name="loans" type="Loan__c[]" />
+		<aura:attribute name="newLoan" type="Loan__c"
+		default="{ 'sobjectType': 'Loan__c',
+					   'Name': '',
+					   'Amount__c': 0,
+					   'Duration__c': '',
+					   'Satatus__c': ''
+						}"/>
+
+					<lightning:input type="number" aura:id="loanform" name="Amount" label="Amount of loan needed" value="{!v.newLoan.Amount__c}"
+						formatter="currency" required="true" />
+					<lightning:input type="number" aura:id="loanform" name="Validity" label="Repayment Period"
+						value="{!v.newLoan.Duration__c}" required="true" />
+					
+					<lightning:input type="text" aura:id="loanform" name="Comments" label="Comments"
+						value="{!v.newLoan.Comments__c}"  />
+					<lightning:button variant="brand" label="Give me the money" title="Submit" onclick="{!c.clickCreateLoan}" />
+					<lightning:button variant="brand" label="Ahh..Nevermind" title="Cancel" onclick="{!c.clickClearLoan}" />
+
+</aura:component>
