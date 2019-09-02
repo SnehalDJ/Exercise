@@ -1,4 +1,3 @@
 <aura:application  extends="force:slds">
-    <!-- <c:EmployeeForm /> -->
-    <c:LoanApplicationForm />
+    <c:EmployeeForm />
 </aura:application>
