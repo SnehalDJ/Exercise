@@ -1,6 +1,6 @@
 <aura:component implements="flexipage:availableForAllPageTypes" controller="LoanController">
-	<aura:attribute name="loans" type="Loan__c[]" />
-	<aura:attribute name="newLoan" type="Loan__c" default="{ 'sobjectType': 'Loan__c',
+	<!-- <aura:attribute name="loans" type="Loan__c[]" /> -->
+	<aura:attribute name="newLoan" type="Loan__c" default="{'sobjectType': 'Loan__c',
 					   'Name': '',
 					   'Amount__c': 0,
 					   'Duration__c': '',

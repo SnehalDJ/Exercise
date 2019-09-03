@@ -20,6 +20,7 @@ public with sharing class LoanController {
 
     @AuraEnabled
     public static Loan__c saveLoan( Loan__c loan){
+        console.log("Create loan: " + JSON.stringify(loan));
         upsert loan;
         return loan;
     }
