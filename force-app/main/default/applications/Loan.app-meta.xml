@@ -9,9 +9,8 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Loan</label>
     <navType>Standard</navType>
-    <tabs>Employee__c</tabs>
-    <tabs>Loan__c</tabs>
     <tabs>Finance_Controller__c</tabs>
+    <tabs>Loan_Application</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Loan_UtilityBar</utilityBar>
 </CustomApplication>
