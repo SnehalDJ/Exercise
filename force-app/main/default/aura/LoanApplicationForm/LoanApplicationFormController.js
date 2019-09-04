@@ -12,6 +12,7 @@
 		//send action off to be executed
 		$A.enqueueAction(action);
 	},
+	
 	clickCreateLoan : function(component, event, helper) {
 
 		var validLoan = component.find('loanform').reduce(function (validSoFar, inputCmp){
@@ -23,8 +24,11 @@
 			var newLoan = component.get("v.newLoan");
 			console.log("Create loan: " + JSON.stringify(newLoan));
 			helper.createLoan(component, newLoan);
-			console.log("loan created");
+			// theLoans.push(newLoan);
+			// component.set("v.loans", theLoans);     
+			// console.log("Loans after 'create': " + JSON.stringify(theLoans));
+	
 		}
 		
-	},
+	}
 })
